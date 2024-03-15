@@ -14,7 +14,7 @@ print("done")
 # ps = PorterStemmer()
 
 
-with open("resources/similarity_matrix.pkl","rb") as f:
+with open("similarity_32.pkl","rb") as f:
     similarity = load(f)
 # print("importing dataset...")
 # df = pd.read_csv("IMDB Dataset.csv")
@@ -50,4 +50,5 @@ app = Flask(__name__)
 @app.route('/')
 def hello_world():
     return 'Hello from Flask!'
-
+if __name__=="__main__":
+    app.run()
