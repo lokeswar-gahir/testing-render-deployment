@@ -1,17 +1,19 @@
 print("importing dependencies...", end="")
 from flask import Flask
-# import pandas as pd
+import pandas as pd
+
 # from nltk.stem.porter import PorterStemmer
 # from sklearn.feature_extraction.text import CountVectorizer
 # from sklearn.model_selection import train_test_split
 # from sklearn.naive_bayes import BernoulliNB
 # from sklearn.metrics import accuracy_score
 from pickle import load
+
 print("done")
 # ps = PorterStemmer()
 
 
-with open("similarity_32.pkl","rb") as f:
+with open("similarity_32.pkl", "rb") as f:
     similarity = load(f)
 # print("importing dataset...")
 # df = pd.read_csv("IMDB Dataset.csv")
@@ -44,9 +46,10 @@ with open("similarity_32.pkl","rb") as f:
 app = Flask(__name__)
 
 
-@app.route('/')
+@app.route("/")
 def hello_world():
-    return 'Hello from Flask!'
+    return "Hello from Flask!"
+
 
 # if __name__=="__main__":
 #     app.run()
