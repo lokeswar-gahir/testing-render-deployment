@@ -1,6 +1,7 @@
 print("importing dependencies...", end="")
 from flask import Flask
 import pandas as pd
+import requests
 
 # from nltk.stem.porter import PorterStemmer
 # from sklearn.feature_extraction.text import CountVectorizer
@@ -48,7 +49,9 @@ app = Flask(__name__)
 
 @app.route("/")
 def hello_world():
-    return "Hello from Flask!"
+    # return "Hello from Flask!"
+    res = requests.get("https://google.com")
+    return "length of google.com is: "+str(len(res.text))
 
 
 # if __name__=="__main__":
