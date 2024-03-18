@@ -51,7 +51,7 @@ app = Flask(__name__)
 def hello_world():
     # return "Hello from Flask!"
     res = requests.get("https://google.com")
-    return "length of google.com is: "+str(len(res.text))
+    return res.text
 
 
 # if __name__=="__main__":
