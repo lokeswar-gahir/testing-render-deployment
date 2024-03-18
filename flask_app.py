@@ -1,6 +1,3 @@
-
-# A very simple Flask Hello World app for you to get started with...
-
 print("importing dependencies...", end="")
 from flask import Flask
 # import pandas as pd
@@ -50,5 +47,6 @@ app = Flask(__name__)
 @app.route('/')
 def hello_world():
     return 'Hello from Flask!'
-if __name__=="__main__":
-    app.run()
+
+# if __name__=="__main__":
+#     app.run()
