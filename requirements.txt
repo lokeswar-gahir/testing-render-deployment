@@ -1,6 +1,7 @@
 flask
 pandas
 nltk
+requests
 scikit-learn==1.2.2
 regex
 gunicorn
